@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextPolishr</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>TextPolishr</h1>
-    <form id="api-key-form">
-        <label for="api-key-input">Enter your OpenAI API Key:</label>
-        <input type="text" id="api-key-input">
-        <button type="submit">Save</button>
+    <h1>TextPolishrGPT</h1>
+    <h3>By AthlasIO</h3>
+    <form id="textPolishrForm">
+        <label for="originalText">Original Text:</label>
+        <textarea id="originalText"></textarea>
+        <label for="improvedText">Improved Text:</label>
+        <textarea id="improvedText" readonly></textarea>
+        <button type="submit">Get Improved Text</button>
     </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="popup.js"></script>
 </body>
 

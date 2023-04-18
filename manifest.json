@@ -1,27 +1,27 @@
 {
   "manifest_version": 2,
-  "name": "TextPolishr",
-  "version": "1.0.0",
-  "description": "Improve your text using ChatGPT.",
+  "name": "TextPolishr: ChatGPT-Powered Editor",
+  "version": "1.0",
+  "description": "A Chrome extension that leverages the power of OpenAI's ChatGPT to enhance and refine highlighted text within the browser.",
   "icons": {
-    "48": "icon48.png",
-    "128": "icon128.png"
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
   },
   "permissions": ["contextMenus", "storage"],
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["content.js"]
     }
   ],
-  "browser_action": {
-    "default_icon": "icon48.png",
-    "default_popup": "popup.html",
-    "default_title": "TextPolishr"
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
   },
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+  "browser_action": {
+    "default_icon": "icons/icon48.png",
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": "script-src 'self' https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js; object-src 'self'"
 }
