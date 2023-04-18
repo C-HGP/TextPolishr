@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "TextPolishr",
+  "version": "1.0.0",
+  "description": "Improve your text using ChatGPT.",
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": ["contextMenus", "storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon48.png",
+    "default_popup": "popup.html",
+    "default_title": "TextPolishr"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
