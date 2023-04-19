@@ -1,7 +1,7 @@
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: "textPolishr",
-    title: "Improve text with ChatGPT",
+    title: "Improve with TextPolishr",
     contexts: ["selection"],
   });
 });

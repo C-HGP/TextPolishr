@@ -9,14 +9,51 @@
 </head>
 
 <body>
-    <h1>TextPolishrGPT</h1>
-    <h3>By AthlasIO</h3>
+    <div id="apiKeyModal" class="modal">
+        <div class="modal-content">
+            <h2>Enter OpenAI API Key</h2>
+            <input type="text" id="apiKeyInput" placeholder="API Key" />
+            <button id="saveApiKey">Save API Key</button>
+
+        </div>
+    </div>
+
+    <div id="progressBarContainer" style="display: none;">
+        <div id="progressBar" style="width: 0%; height: 3px; background-color: #4caf50;"></div>
+    </div>
+
+    <div id="errorModal" class="modal">
+        <div class="modal-content">
+            <h2>Error</h2>
+            <p id="errorMessage"></p>
+            <button id="closeErrorModal">Close</button>
+        </div>
+    </div>
+
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <h2>Settings</h2>
+            <label for="apiKeyInput">OpenAI API Key:</label>
+            <input type="text" id="settingsApiKeyInput" value="" placeholder="API Key" />
+            <button id="updateApiKey">Update API Key</button>
+            <button id="closeSettingsModal">Close</button>
+        </div>
+    </div>
+
+    <div style="position: absolute; top: 10px; right: 10px;">
+        <button id="openSettingsModal" style="border: none; background: none;">
+            <img src="icons/gear.svg" alt="Settings" width="20" height="20" />
+        </button>
+    </div>
+
+    <h1>TextPolishrGPT <img src="icons/icon128.png" width="30" height="30" /></h1>
+    <h3>By <a href=https://athlas.io>AthlasIO</a></h3>
     <form id="textPolishrForm">
         <label for="originalText">Original Text:</label>
-        <textarea id="originalText"></textarea>
+        <textarea id="originalText" readonly></textarea>
         <label for="improvedText">Improved Text:</label>
         <textarea id="improvedText" readonly></textarea>
-        <button type="submit">Get Improved Text</button>
+        <button type="submit" class="button">Get Improved Text</button>
     </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="popup.js"></script>

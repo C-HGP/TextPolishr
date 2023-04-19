@@ -1,4 +1,4 @@
-# TextPolishr: ChatGPT-Powered Editor [WIP]
+# TextPolishr: ChatGPT-Powered Editor
 
 TextPolishr is a Chrome extension that leverages the power of OpenAI's ChatGPT to enhance and refine highlighted text within the browser. With its user-friendly interface, TextPolishr simplifies the text editing process and offers an intelligent solution for improving written content in just a few clicks.
 
@@ -7,26 +7,30 @@ TextPolishr is a Chrome extension that leverages the power of OpenAI's ChatGPT t
 - Highlight text and send it to ChatGPT for improvements
 - Access the extension via the context menu (right-click menu) or the toolbar icon
 - View original and improved text in a simple popup
+- Prompt users when first downloading the plugin and ask for OpenAI API key to create a swift installation
+- Progress bar to indicate the status of the job
+- Error messages for empty input or job failures
+- Settings modal for modifying API key and other relevant options
 
 ## Installation
 
-- Clone this repository to your local machine
-- Open Google Chrome and navigate to chrome://extensions/.
-- Enable "Developer mode" in the top-right corner.
-- Click "Load unpacked" and select the TextPolishr folder.
-- The TextPolishr extension should now be visible in your extensions list, and you should see its icon in the toolbar.
+1. Clone this repository to your local machine
+2. Open Google Chrome and navigate to chrome://extensions/.
+3. Enable "Developer mode" in the top-right corner.
+4. Click "Load unpacked" and select the TextPolishr folder.
+5. The TextPolishr extension should now be visible in your extensions list, and you should see its icon in the toolbar.
 
 ## Usage
 
-- Highlight the text you want to improve.
-- Right-click the highlighted text and choose "Improve text with ChatGPT" or click the TextPolishr toolbar icon.
-- The selected text will appear in the popup's "Original Text" field.
-- Click "Get Improved Text" to fetch the improved text from ChatGPT.
-- The improved text will appear in the "Improved Text" field.
+1. Highlight the text you want to improve.
+2. Right-click the highlighted text and choose "Improve text with ChatGPT" or click the TextPolishr toolbar icon.
+3. The selected text will appear in the popup's "Original Text" field.
+4. Click "Get Improved Text" to fetch the improved text from ChatGPT.
+5. The improved text will appear in the "Improved Text" field.
 
 ## Configuration
 
-Replace the placeholder API key in the popup.js file with your actual ChatGPT API key.
+Click the cogwheel icon in the top right corner to open the settings modal for modifying API key and other options.
 
 ## License
 
