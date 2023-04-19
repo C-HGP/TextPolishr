@@ -2,6 +2,10 @@
 
 TextPolishr is a Chrome extension that leverages the power of OpenAI's ChatGPT to enhance and refine highlighted text within the browser. With its user-friendly interface, TextPolishr simplifies the text editing process and offers an intelligent solution for improving written content in just a few clicks.
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/C-HGP/TextPolishr/main/Screenshot/Screenshot.png" />
+</p>
+
 ## Features
 
 - Highlight text and send it to ChatGPT for improvements
